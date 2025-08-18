@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 4.0)
+project(dcl113_2025_aug_18)
+
+set(CMAKE_CXX_STANDARD 23)
+
+add_executable(exercise01 module02/exercise01.cpp)
+add_executable(exercise02 module02/exercise02.cpp)
+add_executable(exercise03 module02/exercise03.cpp)
+add_executable(exercise04 module02/exercise04.cpp)
+add_executable(exercise05 module02/exercise05.cpp)
+add_executable(exercise06 module02/exercise06.cpp)
+add_executable(exercise07 module02/exercise07.cpp)
+add_executable(exercise08 module02/exercise08.cpp)
+add_executable(exercise09 module02/exercise09.cpp)

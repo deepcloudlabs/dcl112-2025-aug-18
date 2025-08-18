@@ -15,12 +15,10 @@
 *.ilk
 
 # Debugger Files
-*.pdb
+.idea/**
 
 # Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+cmake-build-debug/**
 
 # Fortran module files
 *.mod
