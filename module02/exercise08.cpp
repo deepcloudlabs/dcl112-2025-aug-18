@@ -19,7 +19,7 @@ void print_employee(const employee& emp) { // call by reference
 }
 
 int main() {
-    employee jack;
+    employee jack{};
     strcpy(jack.fullname, "Jack Bauer");
     jack.salary = 4500.00;
     cout << hex << &jack << endl;

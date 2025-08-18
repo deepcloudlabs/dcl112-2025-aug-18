@@ -7,15 +7,15 @@ int main() {
         }
     }
     {
-        auto x = 0.3;
+        [[maybe_unused]] auto x = 0.3;
         {
-            auto y = 0.3;
+            [[maybe_unused]] auto y = 0.3;
             {
-                auto z = 0.3;
+                [[maybe_unused]] auto z = 0.3;
 
             } // z: end of life/scope
         }// y: end of life/scope
     }// x: end of life/scope
-    std::cout << x << std::endl;
+    // std::cout << x << std::endl;
     return 0;
 }
