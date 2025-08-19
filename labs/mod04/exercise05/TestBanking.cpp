@@ -11,7 +11,7 @@ int main() {
 
     // Create an account that can has a 500.00 balance.
     cout << endl << "Creating the customer Jane Smith.";
-    customer = new Customer(string("Jane"), string("Smith"));
+    customer = new Customer(string("Smith"), string("Smith"));
     cout << endl << "Creating her account with a 500.00 balance.";
     customer->setAccount(Account(500.00));
     account = customer->getAccount();
