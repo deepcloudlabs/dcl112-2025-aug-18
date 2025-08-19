@@ -5,16 +5,16 @@ class A {
     int data;
 
 public:
-    A(int data = 0) : data(data) {
+    explicit A(int data = 0) : data(data) {
     }
-    int getData() const { return data; }
+    [[nodiscard]] int getData() const { return data; }
     A operator++() { // pre-increment
         ++data;
         return A(data);
     }
 
     A operator++(int) { // post-increment
-        int temp = data;
+        const int temp = data;
         data++;
         return A(temp);
     }

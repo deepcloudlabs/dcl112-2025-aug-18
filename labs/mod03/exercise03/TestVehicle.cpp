@@ -7,7 +7,7 @@ int main() {
 
     // Create a vehicle that can handle 10,000 kilograms weight
     cout << endl << "Creating a vehicle with a 10,000kg maximum load.";
-    Vehicle *vehicle = new Vehicle(10000.0);
+    auto vehicle = new Vehicle(10000.0);
 
     // Add a few boxes
     cout << endl << "Add box #1 (500kg) : " << ((vehicle->addBox(500.0))?"true":"false");

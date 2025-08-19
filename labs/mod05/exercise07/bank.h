@@ -21,11 +21,11 @@ namespace banking {
 
         Customer *addCustomer(string firstName, string lastName);
 
-        int getNumberOfCustomers() const {
+        [[nodiscard]] int getNumberOfCustomers() const {
             return this->numberOfCustomers;
         }
 
-        Customer *getCustomer(int index) const;
+        [[nodiscard]] Customer *getCustomer(int index) const;
     };
 }
 #endif //DCL113_2025_AUG_18_BANK_H

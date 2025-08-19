@@ -6,7 +6,7 @@ using namespace std;
 using namespace banking;
 
 int main() {
-    Customer *customer;
+    Customer *customer = nullptr;
     Account account(0.0);
 
     // Create an account that can has a 500.00 balance.
@@ -26,19 +26,18 @@ int main() {
     account.withdraw(47.62);
 
     // Print out the final account balance
-    cout  << endl 
-          << "Customer [" 
-          << customer->getLastName()
-	  << ", " 
-          << customer->getFirstName()
-	  << "] has a balance of " 
-          << account.getBalance() 
-          << endl;     
+    cout << endl
+            << "Customer ["
+            << customer->getLastName()
+            << ", "
+            << customer->getFirstName()
+            << "] has a balance of "
+            << account.getBalance()
+            << endl;
     delete customer;
 
-    Account acc1(100),acc2(200);
-    Account sumAcc= acc1+acc2;
+    Account acc1(100), acc2(200);
+    Account sumAcc = acc1 + acc2;
     cout << "Balance of sumAcc is " << sumAcc.getBalance() << endl;
     return 0;
 }
-

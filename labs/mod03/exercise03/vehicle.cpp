@@ -1,7 +1,3 @@
-//
-// Created by binku on 8/19/2025.
-//
-
 #include "vehicle.h"
 
 namespace siemens {
@@ -27,11 +23,11 @@ namespace siemens {
         return true;
     }
 
-    double Vehicle::newsToKilo(double weight) const {
+    double Vehicle::newsToKilo(const double weight) {
         return weight / 9.8;
     }
 
-    double Vehicle::kiloToNews(double weight) const {
+    double Vehicle::kiloToNews(const double weight) {
             return 9.8 * weight;
     }
 } // siemens

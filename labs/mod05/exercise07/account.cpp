@@ -1,7 +1,3 @@
-//
-// Created by binku on 8/19/2025.
-//
-
 #include "account.h"
 
 
@@ -10,8 +6,8 @@ banking::Account::Account(double balance) {
     this->balance = balance;
 }
 
-banking::Account banking::Account::operator+(Account& other) {
-    return Account(this->balance + other.balance);
+banking::Account banking::Account::operator+(const Account& other) const {
+    return Account{this->balance + other.balance};
 }
 
 bool banking::Account::withdraw(const double amount) {

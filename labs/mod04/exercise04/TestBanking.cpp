@@ -4,7 +4,7 @@ using namespace std;
 using namespace banking;
 
 int main() {
-    Account  *account;
+    Account  *account=nullptr;
 
     // Create an account that can has a 500.00 balance.
     cout << endl << "Creating an account with a 500.00 balance.";

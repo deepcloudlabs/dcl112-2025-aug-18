@@ -1,5 +1,7 @@
 #include "bank.h"
 
+#include <utility>
+
 namespace banking {
     Bank::~Bank () {
         if (numberOfCustomers > 0 && customers != nullptr) {
@@ -12,8 +14,8 @@ namespace banking {
     }
 
     Customer* Bank::addCustomer(string firstName,string lastName) {
-        Customer *customer = new Customer(firstName, lastName);
-        Customer **newCustomers = new Customer*[numberOfCustomers+1];
+        const auto customer = new Customer(std::move(firstName), std::move(lastName));
+        const auto newCustomers = new Customer*[numberOfCustomers+1];
         for (auto i=0; i < numberOfCustomers; i++) {
             newCustomers[i] = customers[i];
         }

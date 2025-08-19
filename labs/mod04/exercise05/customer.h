@@ -11,8 +11,8 @@ namespace banking {
         Account account;
         public:
         Customer(string firstName, string lastName);
-        string getFirstName() const;
-        string  getLastName() const;
+        [[nodiscard]] string getFirstName() const;
+        [[nodiscard]] string  getLastName() const;
         Account& getAccount();
         void setAccount(Account account);
     };

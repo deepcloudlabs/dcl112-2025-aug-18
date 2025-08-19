@@ -1,12 +1,10 @@
-//
-// Created by binku on 8/19/2025.
-//
-
 #include "customer.h"
+
+#include <utility>
 
 namespace banking {
     Customer::Customer(string firstName, string lastName)
-        : firstName(firstName), lastName(lastName), account(Account{0}) {
+        : firstName(std::move(firstName)), lastName(std::move(lastName)), account(Account{0}) {
     }
 
     string Customer::getFirstName() const {
@@ -21,7 +19,7 @@ namespace banking {
         return account;
     }
 
-    void Customer::setAccount(Account account) {
-        this->account = account;
+    void Customer::setAccount(const Account acc) {
+        this->account = acc;
     }
 } // banking

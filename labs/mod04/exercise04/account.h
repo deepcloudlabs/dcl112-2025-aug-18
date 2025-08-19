@@ -9,11 +9,11 @@ namespace banking {
         double balance;
     public:
         // methods
-        Account(double balance=0.0); // declaration
-        inline double getBalance() const {return balance;} // declaration + definition
+        explicit Account(double balance=0.0); // declaration
+        [[nodiscard]] double getBalance() const {return balance;} // declaration + definition
         // business methods
-        double withdraw(const double amount); // declaration
-        double deposit(const double amount); // declaration
+        double withdraw(double amount); // declaration
+        double deposit(double amount); // declaration
     };
 } // banking
 
