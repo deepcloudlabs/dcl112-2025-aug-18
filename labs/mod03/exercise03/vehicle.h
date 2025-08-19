@@ -8,16 +8,19 @@
 namespace siemens {
     class Vehicle {
     private:
-        double load;
-        double maxLoad;
+        double load; // newton
+        double maxLoad; // newton
     public:
-        Vehicle(double max_Load) {
-            this->maxLoad = max_Load;
-            this->load = 0;
+        Vehicle(double max_Load) { // accepts kg
+            this->maxLoad = kiloToNews(max_Load);
+            this->load = kiloToNews(0);
         }
-        double getLoad() const;
-        double getMaxLoad() const;
-        bool addBox(const double weight);
+        double getLoad() const; // newton -> kg
+        double getMaxLoad() const; // newton -> kg
+        bool addBox(const double weight); // kg -> newton
+    private:
+        double newsToKilo(double weight) const;
+        double kiloToNews(double weight) const;
     };
 } // siemens
 

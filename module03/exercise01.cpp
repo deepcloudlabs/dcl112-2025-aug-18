@@ -24,7 +24,7 @@ int main() {
         {"tr30", 3'000'000}, // 3'100'000
         {"tr40", 4'000'000}
     };
-    acc1.deposit(100'000);
+    acc1.withdraw(100'000); // withdraw(&acc1,100'000)
     print_account(bank_accounts[2]);
     bank_accounts[2].deposit(100'000);
     print_account(bank_accounts[2]);

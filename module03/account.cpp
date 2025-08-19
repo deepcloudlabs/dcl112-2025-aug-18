@@ -20,7 +20,7 @@ double banking::account::withdraw(const double amount) {
     if (amount > this->balance) {
         return this->balance;
     }
-    this->balance -= amount;
+    balance -= amount;
     return this->balance;
 }
 
