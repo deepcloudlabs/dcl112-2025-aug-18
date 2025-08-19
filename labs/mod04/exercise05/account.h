@@ -14,6 +14,7 @@ namespace banking {
         // business methods
         double withdraw(const double amount); // declaration
         double deposit(const double amount); // declaration
+        Account operator+(Account& other);
     };
 } // banking
 

@@ -28,3 +28,4 @@ add_executable(lab03-exercise01 labs/mod03/exercise01/TestVehicle.cpp labs/mod03
 add_executable(lab03-exercise02 labs/mod03/exercise02/TestVehicle.cpp labs/mod03/exercise02/vehicle.cpp labs/mod03/exercise02/vehicle.h)
 add_executable(lab03-exercise03 labs/mod03/exercise03/TestVehicle.cpp labs/mod03/exercise03/vehicle.cpp labs/mod03/exercise03/vehicle.h)
 add_executable(lab04-exercise04 labs/mod04/exercise04/TestBanking.cpp labs/mod04/exercise04/account.cpp labs/mod04/exercise04/account.h)
+add_executable(lab04-exercise05 labs/mod04/exercise05/TestBanking.cpp labs/mod04/exercise05/account.cpp labs/mod04/exercise05/account.h labs/mod04/exercise05/customer.cpp labs/mod04/exercise05/customer.h)
