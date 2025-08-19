@@ -20,3 +20,4 @@ add_executable(banking_project module03/bankingapp.cpp module03/account.cpp modu
 add_executable(banking_exercise01 module03/exercise01.cpp module03/account.cpp module03/account.h)
 add_executable(banking_exercise02 module03/exercise02.cpp module03/account.cpp module03/account.h)
 add_executable(lab03-exercise01 labs/mod03/exercise01/TestVehicle.cpp labs/mod03/exercise01/vehicle.cpp labs/mod03/exercise01/vehicle.h)
+add_executable(lab03-exercise02 labs/mod03/exercise02/TestVehicle.cpp labs/mod03/exercise02/vehicle.cpp labs/mod03/exercise02/vehicle.h)
