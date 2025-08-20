@@ -7,9 +7,10 @@ class CustomerReport {
 private:
     CustomerReport() {
     }
+
 public:
 
-   static void generateReport() ;
+    static void generateReport() ;
 };
 #endif	/* _CUSTOMERREPORT_H */
 
