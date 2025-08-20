@@ -1,5 +1,7 @@
 #ifndef DCL113_2025_AUG_18_ACCOUNT_H
 #define DCL113_2025_AUG_18_ACCOUNT_H
+#include <iostream>
+#include <ostream>
 #include <string>
 
 using namespace std;
@@ -14,9 +16,12 @@ namespace banking {
         // methods
         [[nodiscard]] double getBalance() const {return balance;} // declaration + definition
         // business methods
-        bool withdraw(double amount); // declaration
-        bool deposit(double amount); // declaration
+        virtual bool withdraw(double amount); // declaration
+        virtual bool deposit(double amount); // declaration
         Account operator+(const Account& other) const;
+        virtual ~Account() {
+            cout << "Account::~Account()" << endl;
+        }
     };
 } // banking
 

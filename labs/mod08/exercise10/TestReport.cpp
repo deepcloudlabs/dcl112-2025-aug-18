@@ -43,7 +43,7 @@ int main() {
         for (int i=0;i<Bank::getNumberOfCustomers();++i) {
             auto customer=Bank::getCustomer(i);
             for (int j=0;j<customer->getNumberOfAccounts();++j) {
-                auto account=customer->getAccount(j);
+                Account* account=customer->getAccount(j);
                 account->withdraw(100);
             }
         }

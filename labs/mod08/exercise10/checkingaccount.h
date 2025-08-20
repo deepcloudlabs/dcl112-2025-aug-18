@@ -11,6 +11,9 @@ namespace banking {
         [[nodiscard]] double getOverdraft_amount() const {return overdraft_amount;}
         // override
         bool withdraw(double amount);
+        ~CheckingAccount() {
+            cout << "CheckingAccount::~CheckingAccount()" << endl;
+        }
     };
 } // banking
 /*

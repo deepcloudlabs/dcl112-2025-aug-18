@@ -8,6 +8,10 @@ namespace banking {
         double interest_rate;
     public:
         explicit SavingsAccount(double balance, double interest_rate);
+        bool withdraw(double amount) override;
+        ~SavingsAccount() {
+            cout << "SavingsAccount::~SavingsAccount()" << endl;
+        }
     };
 } // banking
 
