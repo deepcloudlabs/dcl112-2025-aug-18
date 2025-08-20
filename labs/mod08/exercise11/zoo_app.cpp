@@ -13,8 +13,7 @@ int main() {
     for (auto animal : animals) {
         animal->walk();
         animal->eat();
-        if (typeid(*animal) == typeid(zoo::pet)) { // RTTI (Run-time Type Information)
-            const auto pet = dynamic_cast<zoo::pet*>(animal);
+        if (const auto pet = dynamic_cast<zoo::pet*>(animal)) { // RTTI (Run-time Type Information)
             pet->play();
         }
     }
