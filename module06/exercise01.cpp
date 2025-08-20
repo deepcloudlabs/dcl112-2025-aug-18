@@ -14,7 +14,7 @@ class A {
 
 class B : public A {
     public:
-    B() {
+    B() : A() {
         cout << "B's constructor..." << endl;
     }
     ~B() {
@@ -23,7 +23,7 @@ class B : public A {
 };
 class C : public B {
     public:
-    C() {
+    C():B() {
         cout << "C's constructor..." << endl;
     }
     ~C() {
@@ -33,7 +33,7 @@ class C : public B {
 
 class D : public C {
     public:
-    D() {
+    D():C() {
         cout << "D's constructor..." << endl;
     }
     ~D() {
