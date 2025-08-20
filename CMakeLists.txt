@@ -57,3 +57,13 @@ add_executable(lab08-exercise10 labs/mod08/exercise10/TestReport.cpp labs/mod08/
         labs/mod08/exercise10/CustomerReport.h
         labs/mod08/exercise10/savingsaccount.cpp
         labs/mod08/exercise10/savingsaccount.h)
+
+add_executable(lab08-exercise11 labs/mod08/exercise11/zoo_app.cpp labs/mod08/exercise11/animal.cpp labs/mod08/exercise11/animal.h
+        labs/mod08/exercise11/pet.cpp
+        labs/mod08/exercise11/pet.h
+        labs/mod08/exercise11/spider.cpp
+        labs/mod08/exercise11/spider.h
+        labs/mod08/exercise11/cat.cpp
+        labs/mod08/exercise11/cat.h
+        labs/mod08/exercise11/fish.cpp
+        labs/mod08/exercise11/fish.h)

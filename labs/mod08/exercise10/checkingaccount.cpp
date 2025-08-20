@@ -21,4 +21,14 @@ namespace banking {
         balance -= amount;
         return true;
     }
+
+    bool banking::CheckingAccount::deposit(const double amount) {
+        cout << "Account's deposit() is running..." << endl;
+        // validation
+        if (amount <= 0.0) {
+            return false;
+        }
+        this->balance += amount;
+        return true;
+    }
 } // banking

@@ -1,0 +1,24 @@
+#ifndef DCL113_2025_AUG_18_ANIMAL_H
+#define DCL113_2025_AUG_18_ANIMAL_H
+#include <iostream>
+
+namespace zoo {
+    class animal {
+    protected:
+        int legs;
+
+    public:
+        explicit animal(const int legs) : legs(legs) {
+        }
+
+        virtual void walk();
+
+        virtual void eat() = 0;
+
+        virtual ~animal() {
+            std::cout << "animal::~animal()" << std::endl;
+        }
+    };
+} // zoo
+
+#endif //DCL113_2025_AUG_18_ANIMAL_H
