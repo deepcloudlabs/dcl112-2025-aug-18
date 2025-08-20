@@ -42,4 +42,5 @@ int main() {
     }
     //                     dynamically binding?
     cout << "area is " << ptr->area() << endl;
+    return 0;
 }
