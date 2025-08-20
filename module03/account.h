@@ -5,7 +5,7 @@
 using namespace std;
 
 namespace banking {
-    class account {
+    class account { // domain class
         // information hiding
         // attributes/state/data: iban, balance
     private: // default permission
