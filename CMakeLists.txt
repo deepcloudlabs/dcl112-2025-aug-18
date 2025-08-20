@@ -43,3 +43,9 @@ add_executable(lab05-exercise07 labs/mod05/exercise07/TestBanking.cpp labs/mod05
 add_executable(lab06-exercise08 labs/mod06/exercise08/TestBanking.cpp labs/mod06/exercise08/account.cpp labs/mod06/exercise08/account.h labs/mod06/exercise08/customer.cpp labs/mod06/exercise08/customer.h labs/mod06/exercise08/bank.cpp labs/mod06/exercise08/bank.h labs/mod06/exercise08/checkingaccount.cpp labs/mod06/exercise08/checkingaccount.h
         labs/mod06/exercise08/savingsaccount.cpp
         labs/mod06/exercise08/savingsaccount.h)
+
+add_executable(lab08-exercise09 labs/mod08/exercise09/TestReport.cpp labs/mod08/exercise09/account.cpp labs/mod08/exercise09/account.h labs/mod08/exercise09/customer.cpp labs/mod08/exercise09/customer.h labs/mod08/exercise09/bank.cpp labs/mod08/exercise09/bank.h labs/mod08/exercise09/checkingaccount.cpp labs/mod08/exercise09/checkingaccount.h
+        labs/mod08/exercise09/CustomerReport.cpp
+        labs/mod08/exercise09/CustomerReport.h
+        labs/mod08/exercise09/savingsaccount.cpp
+        labs/mod08/exercise09/savingsaccount.h)

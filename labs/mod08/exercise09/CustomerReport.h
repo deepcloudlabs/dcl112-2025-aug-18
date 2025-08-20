@@ -1,10 +1,5 @@
-/* 
- * File:   CustomerReport.h
- * Author: binnur.kurt
- *
- * Created on November 9, 2008, 10:02 PM
- */
 #include "Bank.h"
+using namespace banking;
 
 #ifndef _CUSTOMERREPORT_H
 #define	_CUSTOMERREPORT_H

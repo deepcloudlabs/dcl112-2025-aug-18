@@ -1,5 +1,3 @@
-
-#include <stdlib.h>
 #include "bank.h"
 #include "customer.h"
 #include "account.h"
@@ -11,15 +9,12 @@ using namespace banking;
 
 void initializeCustomers(Bank *) ;
 
-/*
- * 
- */
 int main() {
-    Bank *bank = new Bank();
+    auto bank = new Bank();
     initializeCustomers(bank);
 
     // run the customer report
-    CustomerReport *report = new CustomerReport();
+    const auto report = new CustomerReport();
     report->setBank(bank);
     report->generateReport();
     
@@ -27,7 +22,7 @@ int main() {
 }
 
  void initializeCustomers(Bank *bank) {
-        Customer *customer;
+        Customer *customer=nullptr;
         
         // Create several customers and their accounts
         bank->addCustomer("Jane", "Simms");
