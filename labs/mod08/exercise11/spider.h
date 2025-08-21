@@ -14,6 +14,10 @@ namespace zoo {
         }
 
         void eat() override;
+
+        ~spider() {
+            std::cout << "spider::~spider()" << std::endl;
+        }
     };
 } // zoo
 

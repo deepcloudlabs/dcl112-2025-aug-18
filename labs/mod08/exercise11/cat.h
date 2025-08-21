@@ -28,7 +28,9 @@ namespace zoo {
 
         void play() override;
 
-        ~cat() override = default;
+        ~cat()  {
+            std::cout << "cat::~cat()" << std::endl;
+        }
     };
 } // zoo
 

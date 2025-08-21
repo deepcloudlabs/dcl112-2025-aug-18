@@ -3,7 +3,7 @@
 #include <iostream>
 
 namespace zoo {
-    class animal {
+    class animal { // abstract class -> cannot instantiate an object
     protected:
         int legs;
 
@@ -11,9 +11,9 @@ namespace zoo {
         explicit animal(const int legs) : legs(legs) {
         }
 
-        virtual void walk();
+        virtual void walk(); // concrete
 
-        virtual void eat() = 0;
+        virtual void eat() = 0; // pure virtual method = abstract method
 
         virtual ~animal() {
             std::cout << "animal::~animal()" << std::endl;
