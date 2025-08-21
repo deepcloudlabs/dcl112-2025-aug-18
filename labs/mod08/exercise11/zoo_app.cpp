@@ -1,3 +1,5 @@
+#include <vector>
+
 #include "cat.h"
 #include "fish.h"
 #include "spider.h"
@@ -22,7 +24,7 @@ int main() {
     // fish::eat's address
     // ~fish
 
-    zoo::animal* animals[] {
+    std::vector<zoo::animal*> animals {
         new zoo::cat(),
         new zoo::spider(),
         new zoo::cat(std::string("Garfield")),
