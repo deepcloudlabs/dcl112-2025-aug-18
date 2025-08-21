@@ -6,44 +6,6 @@
 
 using namespace std;
 
-bool maxBySalaryFunction(const employee & left,const employee& right) {
-    return left.getMSalary() < right.getMSalary();
-}
-
-struct MaxBySalary { // Function Object/Functor
-    bool operator()(const auto& left,const auto& right) {
-        return left.getMSalary() < right.getMSalary();
-    }
-};
-
-template <typename T, typename Projection>
-struct MaxBy {
-    bool operator()(const T& left,const T& right) const {
-        Projection projection{};
-        return projection(left) < projection(right);
-    }
-};
-
-struct ByAge {
-    int operator()(const employee& emp) const {
-        return emp.getMBirthYear();
-    };
-
-};
-
-struct BySalary {
-    double operator()(const employee& emp) const {
-        return emp.getMSalary();
-    };
-
-};
-
-struct ByFullNameLength {
-    int operator()(const employee& emp) const {
-        return emp.getMFirstName().size() + emp.getMLastName().size();
-    };
-
-};
 int main() {
     vector<employee> employees{
     {"james",  "sawyer",   employee::department_t::it,      employee::gender_t::male,   250'000, "tr100", 1982},
@@ -108,21 +70,17 @@ int main() {
     {"stella", "hughes",   employee::department_t::marketing, employee::gender_t::female, 245'000, "tr545", 1986}
     };
     // Higher-Order Function
-    auto maxBySalary = [](const auto& left,const auto& right) {
-        return left.getMSalary() < right.getMSalary();
-    }; // Function Object -> struct MaxBySalary
-    auto employee_with_highest_salary =
-    max_element(employees.begin(), employees.end(),MaxBy<employee,ByFullNameLength>{});
-    auto employee_with_lowest_salary =
-    min_element(employees.begin(), employees.end(),MaxBy<employee,ByFullNameLength>{});
-    // max_element(employees.begin(), employees.end(),maxBySalaryFunction); // ordinary function
-    //max_element(employees.begin(), employees.end(),MaxBySalary{}); // Function Object
-    //max_element(employees.begin(), employees.end(),maxBySalary); // Lambda Expression
-    if (employee_with_highest_salary != employees.end()) {
-        cout << *employee_with_highest_salary << endl;
-    }
-    if (employee_with_lowest_salary != employees.end()) {
-        cout << *employee_with_lowest_salary << endl;
-    }
+    auto marketingEmployee = employees.begin() ;
+    do {
+        marketingEmployee = find_if(marketingEmployee, employees.end(),
+            [](const employee& emp) {
+                 return emp.getMDepartment() == employee::department_t::marketing;
+            }
+        );
+        if (marketingEmployee != employees.end()) {
+            cout << *marketingEmployee << endl;
+            ++marketingEmployee;
+        }
+    } while (marketingEmployee != employees.end());
     return 0;
 }

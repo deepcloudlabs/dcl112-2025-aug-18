@@ -36,6 +36,13 @@ public:
 
     int getMBirthYear() const;
 
+    bool operator<(const employee &emp) const {
+        return getMIban() < emp.getMIban();
+    }
+
+    bool operator==(const employee& emp) const {
+        return getMIban() == emp.getMIban();
+    }
 private:
     string m_first_name;
     string m_last_name;

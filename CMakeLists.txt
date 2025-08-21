@@ -48,6 +48,18 @@ add_executable(mod11-exercise1 module11/exercise01.cpp
         module11/employee.cpp
         module11/employee.h)
 
+add_executable(mod11-exercise2 module11/exercise02.cpp
+        module11/employee.cpp
+        module11/employee.h)
+
+add_executable(mod11-exercise3 module11/exercise03.cpp
+        module11/employee.cpp
+        module11/employee.h)
+
+add_executable(mod11-exercise4 module11/exercise04.cpp
+        module11/employee.cpp
+        module11/employee.h)
+
 add_executable(banking_project module03/bankingapp.cpp module03/account.cpp module03/account.h)
 
 add_executable(banking_exercise01 module03/exercise01.cpp module03/account.cpp module03/account.h)
