@@ -1,0 +1,33 @@
+1. imperative programming -> oop
+   for-loop
+   algorithm/flow
+
+2. declarative programming -> functional programming
+   describe solution: SQL
+   select count(*)
+   from countries
+   where continent='Asia'
+
+   since c++03: STL: algorithm -> parallel stl algorithm since c++17
+   since c++11: lambda expression, method reference
+   since c++20: ranges -> standard library
+
+   functional programming
+    I. Higher-Order Functions
+   II. Pure Function
+   int x = 42;
+   account acc{100'000};
+   account *p = new account{200'000};
+   function<bool(int)> fun = [](int x){return x%2 == 0;};
+
+   Higher-Order Function: function chains -> pipeline
+   data -> STL container (vector,set,map,...)
+   data -> pipeline -> solution
+
+   1. STL           : legacy functional programming
+                      parallel stl algorithm since c++17
+
+   2. ranges (c++20): modern functional programming
+                      lazy evaluation
+                      generator function
+                      parallel pipeline: not ready
