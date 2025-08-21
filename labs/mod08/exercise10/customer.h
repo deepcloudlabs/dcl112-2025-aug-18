@@ -2,6 +2,7 @@
 #define DCL113_2025_AUG_18_CUSTOMER_H
 #include "account.h"
 #include <string>
+#include <vector>
 using namespace std;
 
 namespace banking {
@@ -9,9 +10,7 @@ namespace banking {
         // domain class
         string firstName;
         string lastName;
-        Account **accounts;
-        int numberOfAccounts;
-
+        vector<Account*> accounts;
     public:
         Customer(string firstName, string lastName);
 

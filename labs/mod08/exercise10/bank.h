@@ -7,8 +7,7 @@ using namespace std;
 namespace banking {
     class Bank {
         // domain class
-        static Customer **customers;
-        static int numberOfCustomers;
+        static vector<Customer *> customers;
 
         Bank() = default;
 
@@ -26,7 +25,7 @@ namespace banking {
         static Customer *addCustomer(string firstName, string lastName);
 
         [[nodiscard]] static int getNumberOfCustomers() {
-            return numberOfCustomers;
+            return customers.size();
         }
 
         [[nodiscard]] static Customer *getCustomer(int index);

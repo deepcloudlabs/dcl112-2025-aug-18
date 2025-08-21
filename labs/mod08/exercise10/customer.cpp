@@ -5,7 +5,7 @@
 namespace banking {
     Customer::Customer(string firstName, string lastName)
         : firstName(std::move(firstName)), lastName(std::move(lastName)),
-          accounts(nullptr), numberOfAccounts(0) {
+          accounts{} {
     }
 
     string Customer::getFirstName() const {
@@ -17,33 +17,23 @@ namespace banking {
     }
 
     Account *Customer::getAccount(const int index) const {
-        if (index < 0 || index >= numberOfAccounts) {
+        if (index < 0 || index >= accounts.size()) {
             return nullptr;
         }
         return this->accounts[index];
     }
 
     void Customer::addAccount(Account *acc) {
-        auto newAccounts = new Account *[this->numberOfAccounts + 1];
-        for (int i = 0; i < this->numberOfAccounts; i++) {
-            newAccounts[i] = this->accounts[i];
-        }
-        newAccounts[this->numberOfAccounts] = acc;
-        this->numberOfAccounts++;
-        delete[] this->accounts;
-        this->accounts = newAccounts;
+        accounts.insert(accounts.end(),acc);
     }
 
     int Customer::getNumberOfAccounts() const {
-        return this->numberOfAccounts;
+        return accounts.size();
     }
 
     Customer::~Customer() {
-        if (accounts != nullptr) {
-            for (int i = 0; i < this->numberOfAccounts; i++) {
-                delete this->accounts[i];
-            }
-            delete accounts;
+        for (const auto account : accounts) {
+            delete account;
         }
     }
 } // banking
