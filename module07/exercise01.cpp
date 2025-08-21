@@ -2,6 +2,11 @@
 using namespace std;
 
 class A {
+public:
+    virtual ~A() = default;
+
+    virtual void sun() {
+    }
 };
 
 class B : public A {
@@ -27,11 +32,16 @@ int main() {
 
     C *w = new C{};
 
-    D *d = static_cast<D *>(q);
+    D *d = dynamic_cast<D *>(q);
     // static bind
     cout << d->fun() << endl;
 
     delete p;
+    delete s;
+    delete t;
+    delete ut;
+    delete u;
+    delete w;
     delete q;
     delete r;
     return 0;

@@ -6,10 +6,12 @@ protected:
     double edge;
 
 public:
+    virtual ~Square() = default;
+
     explicit Square(const double e) : edge(e) {
     }
 
-    virtual double area() const {
+    [[nodiscard]] virtual double area() const {
         cout << "Square::area()" << endl;
         return (edge * edge);
     }
@@ -20,10 +22,12 @@ public:
     explicit Cube(const double e) : Square(e) {
     }
 
-    double area() const {
+    [[nodiscard]] double area() const override {
         cout << "Cube::area()" << endl;
         return (6.0 * edge * edge);
     }
+
+    ~Cube() override;
 };
 
 int main() {

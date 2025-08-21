@@ -73,7 +73,7 @@ int main() {
     };
 
     // imperative programming
-    auto numberOfITEmployees = 0;
+    long long numberOfITEmployees = 0;
     for (const auto &employee: employees) {
         // external loop
         if (employee.getMDepartment() == employee::department_t::it) {

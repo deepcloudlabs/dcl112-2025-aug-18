@@ -6,7 +6,7 @@
 
 
 // definitions
-banking::account::account(string iban, double balance) {
+banking::account::account(const string &iban, double balance) {
     this->iban = iban;
     this->balance = balance;
 }

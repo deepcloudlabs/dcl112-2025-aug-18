@@ -7,10 +7,12 @@ protected:
     int x;
 
 public:
+    virtual ~A() = default;
+
     explicit A(const int x = 0) : x(x) {
     }
 
-    int fun() const { return x; }
+    [[nodiscard]] int fun() const { return x; }
 
     virtual void gun() =0; // pure virtual method -> abstract method
 };
@@ -23,7 +25,7 @@ public:
     explicit B(const int x, const int y) : A(x), y(y) {
     }
 
-    virtual int fun() const { return x * y; }
+    [[nodiscard]] virtual int fun() const { return x * y; }
 
     void gun() override {
     }
@@ -36,7 +38,7 @@ public:
     explicit C(const int x, const int y, const int z) : B(x, y), z(z) {
     }
 
-    int fun() const { return x * y * z; }
+    [[nodiscard]] int fun() const override { return x * y * z; }
 };
 
 int main() {
@@ -44,6 +46,7 @@ int main() {
     cout << p->fun() << endl; // fun: statically bind -> 3
     B *q = new C{3, 5, 7}; //
     cout << q->fun() << endl; // fun: dynamically bind -> 105
-
+    delete p;
+    delete q;
     return 0;
 }

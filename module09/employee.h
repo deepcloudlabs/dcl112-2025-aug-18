@@ -19,24 +19,24 @@ public:
         it, finance, hr, sales, marketing
     };
 
-    employee(const string &mFirstName, const string &mLastName, department_t mDepartment, gender_t mGender,
-             double mSalary, const string &mIban, int mBirthYear);
+    employee(string mFirstName, string mLastName, department_t mDepartment, gender_t mGender,
+             double mSalary, string mIban, int mBirthYear);
 
     employee();
 
-    const string &getMFirstName() const;
+    [[nodiscard]] const string &getMFirstName() const;
 
-    const string &getMLastName() const;
+    [[nodiscard]] const string &getMLastName() const;
 
-    department_t getMDepartment() const;
+    [[nodiscard]] department_t getMDepartment() const;
 
-    gender_t getMGender() const;
+    [[nodiscard]] gender_t getMGender() const;
 
-    double getMSalary() const;
+    [[nodiscard]] double getMSalary() const;
 
-    const string &getMIban() const;
+    [[nodiscard]] const string &getMIban() const;
 
-    int getMBirthYear() const;
+    [[nodiscard]] int getMBirthYear() const;
 
 private:
     string m_first_name;
@@ -48,6 +48,6 @@ private:
     int m_birth_year;
 };
 
-ostream &operator<<(ostream &os, employee &emp);
+ostream &operator<<(ostream &os, const employee &emp);
 
 #endif //DCL113_2025_AUG_18_EMPLOYEE_H

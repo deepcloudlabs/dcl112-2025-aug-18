@@ -1,9 +1,11 @@
 #include "employee.h"
 
-employee::employee(const string &mFirstName, const string &mLastName, employee::department_t mDepartment,
-                   employee::gender_t mGender, double mSalary, const string &mIban, int mBirthYear) : m_first_name(
-        mFirstName), m_last_name(mLastName), m_department(mDepartment), m_gender(mGender), m_salary(mSalary),
-    m_iban(mIban),
+#include <utility>
+
+employee::employee(string mFirstName, string mLastName, employee::department_t mDepartment,
+                   employee::gender_t mGender, double mSalary, string mIban, int mBirthYear) : m_first_name(std::move(
+        mFirstName)), m_last_name(std::move(mLastName)), m_department(mDepartment), m_gender(mGender), m_salary(mSalary),
+    m_iban(std::move(mIban)),
     m_birth_year(
         mBirthYear) {
 }
@@ -45,7 +47,7 @@ employee::employee() : m_first_name("kate"),
                        m_birth_year(1998) {
 }
 
-ostream &operator<<(ostream &os, employee &emp) {
+ostream &operator<<(ostream &os, const employee &emp) {
     os << "employee["
             << "first name: " << emp.getMFirstName()
             << ", last name: " << emp.getMLastName()

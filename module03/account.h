@@ -16,17 +16,17 @@ namespace banking {
     public:
         // methods
         // constructor
-        account(string iban, double balance = 0.0); // declaration
+        explicit account(const string &iban, double balance = 0.0); // declaration
         // getter methods
-        inline string get_iban() const {
+        [[nodiscard]] string get_iban() const {
             // declaration + definition
             return iban;
         }
 
-        inline double get_balance() const { return balance; } // declaration + definition
+        [[nodiscard]] double get_balance() const { return balance; } // declaration + definition
         // business methods
-        double withdraw(const double amount); // declaration
-        double deposit(const double amount); // declaration
+        double withdraw(double amount); // declaration
+        double deposit(double amount); // declaration
     };
 } // banking
 

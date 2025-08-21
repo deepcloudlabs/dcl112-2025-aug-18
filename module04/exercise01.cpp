@@ -22,8 +22,9 @@ public:
         this->data = other.data;
     }
 
-    void operator=(A &other) {
+    const A& operator=(const A &other) const {
         cout << "A::operator==()" << endl;
+        return other;
     }
 
     ~A() {

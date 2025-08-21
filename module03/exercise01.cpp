@@ -13,16 +13,16 @@ print_account(const banking::account &acc) {
 int main() {
     double x{3.14}; // uniform initialization
     int y{};
-    int z();
+    int z=int();
     int m = int();
     // stack object
     banking::account acc1{"tr3"};
     // stack array
     banking::account bank_accounts[]{
-        {"tr10", 1'000'000},
-        {"tr20", 2'000'000},
-        {"tr30", 3'000'000}, // 3'100'000
-        {"tr40", 4'000'000}
+        banking::account{"tr10", 1'000'000},
+        banking::account{"tr20", 2'000'000},
+        banking::account{"tr30", 3'000'000}, // 3'100'000
+        banking::account{"tr40", 4'000'000}
     };
     acc1.withdraw(100'000); // withdraw(&acc1,100'000)
     print_account(bank_accounts[2]);

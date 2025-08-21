@@ -38,7 +38,7 @@ struct BySalary {
 };
 
 struct ByFullNameLength {
-    int operator()(const employee &emp) const {
+    size_t operator()(const employee &emp) const {
         return emp.getMFirstName().size() + emp.getMLastName().size();
     };
 };
@@ -107,7 +107,7 @@ int main() {
         {"stella", "hughes", employee::department_t::marketing, employee::gender_t::female, 245'000, "tr545", 1986}
     };
     // Higher-Order Function
-    auto maxBySalary = [](const auto &left, const auto &right) {
+    [[maybe_unused]] auto maxBySalary = [](const auto &left, const auto &right) {
         return left.getMSalary() < right.getMSalary();
     }; // Function Object -> struct MaxBySalary
     auto employee_with_highest_salary =
