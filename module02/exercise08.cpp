@@ -2,18 +2,19 @@
 #include <iostream>
 using namespace std;
 
-struct employee{
+struct employee {
     char fullname[60]; // 60-B
-    double salary;     // 8-B
-                       // 4-B padding
+    double salary; // 8-B
+    // 4-B padding
 };
 
 // read-only
-void print_employee(const employee& emp) { // call by reference
+void print_employee(const employee &emp) {
+    // call by reference
     cout << hex << &emp << endl;
     cout << "{ fullname: " << emp.fullname
-         << ", salary: " << emp.salary
-         << " }" << endl;
+            << ", salary: " << emp.salary
+            << " }" << endl;
     // error: emp.salary *= 2;
     cout << sizeof(employee) << endl;
 }

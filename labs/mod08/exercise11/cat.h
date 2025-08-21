@@ -10,25 +10,27 @@
 #include "pet.h"
 
 namespace zoo {
-    class cat : public animal , public pet {
+    class cat : public animal, public pet {
         std::string name;
+
     public:
         explicit cat()
-            : animal(4),name(std::string("Tekir")) {
+            : animal(4), name(std::string("Tekir")) {
         }
-        explicit cat(std::string  name)
-            : animal(4),name(std::move(name)) {
+
+        explicit cat(std::string name)
+            : animal(4), name(std::move(name)) {
         }
 
         void eat() override;
 
-        std::string & getName() override;
+        std::string &getName() override;
 
         void setName(std::string &name) override;
 
         void play() override;
 
-        ~cat()  {
+        ~cat() {
             std::cout << "cat::~cat()" << std::endl;
         }
     };

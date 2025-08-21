@@ -29,6 +29,7 @@ namespace banking {
         }
 
         [[nodiscard]] static Customer *getCustomer(int index);
+
         static void shutdown();
     };
 }

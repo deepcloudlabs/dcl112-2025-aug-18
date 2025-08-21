@@ -5,7 +5,8 @@
 using namespace std;
 
 namespace banking {
-    class Bank { // domain class
+    class Bank {
+        // domain class
         Customer **customers;
         int numberOfCustomers;
 

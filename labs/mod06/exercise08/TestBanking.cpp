@@ -41,7 +41,7 @@ int main() {
     cout << endl << "Maria shares her Checking Account with her husband Tim.";
     customer->setAccount(new SavingsAccount(2500.00, 42.00));
 
-    cout << endl ;
+    cout << endl;
 
     //
     // Demonstrate behavior of various account types
@@ -58,10 +58,10 @@ int main() {
     cout << endl << "Withdraw 400.00: " << account->withdraw(400.00);
     // Print out the final account balance
     cout << endl << "Customer [" + customer->getLastName()
-		       + ", " + customer->getFirstName()
-		       + "] has a balance of " << account->getBalance();
+            + ", " + customer->getFirstName()
+            + "] has a balance of " << account->getBalance();
 
-    cout << endl ;
+    cout << endl;
 
     // Test a Checking Account w/o overdraft protection
     cout << endl << "Retrieving the customer Owen Bryant with his checking account with no overdraft protection.";
@@ -74,10 +74,10 @@ int main() {
     cout << endl << "Withdraw 400.00: " << account->withdraw(400.00);
     // Print out the final account balance
     cout << endl << "Customer [" << customer->getLastName()
-		       << ", " << customer->getFirstName()
-		       << "] has a balance of " << account->getBalance();
+            << ", " << customer->getFirstName()
+            << "] has a balance of " << account->getBalance();
 
-    cout << endl ;
+    cout << endl;
 
     // Test a Checking Account with overdraft protection
     cout << endl << "Retrieving the customer Tim Soley with his checking account that has overdraft protection.";
@@ -90,10 +90,10 @@ int main() {
     cout << endl << "Withdraw 400.00: " << account->withdraw(400.00);
     // Print out the final account balance
     cout << endl << "Customer [" << customer->getLastName()
-		       << ", " << customer->getFirstName()
-		       << "] has a balance of " << account->getBalance();
+            << ", " << customer->getFirstName()
+            << "] has a balance of " << account->getBalance();
 
-    cout << endl ;
+    cout << endl;
 
     // Test a Checking Account with overdraft protection
     cout << endl << "Retrieving the customer Maria Soley with her joint checking account with husband Tim.";
@@ -104,11 +104,10 @@ int main() {
     cout << endl << "Withdraw 750.00: " << account->withdraw(750.00);
     // Print out the final account balance
     cout << endl << "Customer [" << customer->getLastName()
-		       << ", " << customer->getFirstName()
-		       << "] has a balance of " 
-                       << account->getBalance()
-                       << endl ;
+            << ", " << customer->getFirstName()
+            << "] has a balance of "
+            << account->getBalance()
+            << endl;
     delete bank;
     return 0;
 }
-

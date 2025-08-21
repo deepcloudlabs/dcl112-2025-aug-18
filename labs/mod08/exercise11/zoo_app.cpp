@@ -24,7 +24,7 @@ int main() {
     // fish::eat's address
     // ~fish
 
-    std::vector<zoo::animal*> animals {
+    std::vector<zoo::animal *> animals{
         new zoo::cat(),
         new zoo::spider(),
         new zoo::cat(std::string("Garfield")),
@@ -38,16 +38,16 @@ int main() {
     zoo::animal *r = new zoo::spider();
     // zoo::pet *s = new zoo::spider(); // error
 
-    for (auto animal : animals) {
+    for (auto animal: animals) {
         std::cout << typeid(*animal).name() << std::endl;
         animal->walk();
         animal->eat();
-        if (const auto pet = dynamic_cast<zoo::pet*>(animal))
-        { // RTTI (Run-time Type Information) -> Virtual Table
+        if (const auto pet = dynamic_cast<zoo::pet *>(animal)) {
+            // RTTI (Run-time Type Information) -> Virtual Table
             pet->play();
         }
     }
-    for (const auto animal : animals) {
+    for (const auto animal: animals) {
         delete animal;
     }
     return 0;

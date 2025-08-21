@@ -8,10 +8,14 @@ namespace banking {
 
     public:
         explicit CheckingAccount(double balance = 0.0, double overdraft_amount = 0.0);
-        [[nodiscard]] double getOverdraft_amount() const {return overdraft_amount;}
+
+        [[nodiscard]] double getOverdraft_amount() const { return overdraft_amount; }
+
         // override
         bool withdraw(double amount) override;
+
         bool deposit(double amount) override;
+
         ~CheckingAccount() {
             cout << "CheckingAccount::~CheckingAccount()" << endl;
         }

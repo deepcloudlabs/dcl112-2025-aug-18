@@ -7,13 +7,17 @@ class A {
 public:
     explicit A(int data = 0) : data(data) {
     }
+
     [[nodiscard]] int getData() const { return data; }
-    A operator++() { // pre-increment
+
+    A operator++() {
+        // pre-increment
         ++data;
         return A(data);
     }
 
-    A operator++(int) { // post-increment
+    A operator++(int) {
+        // post-increment
         const int temp = data;
         data++;
         return A(temp);

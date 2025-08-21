@@ -4,17 +4,17 @@
 using namespace std;
 
 void
-print_account(const banking::account& acc) {
+print_account(const banking::account &acc) {
     cout << "account[ iban: " << acc.get_iban()
-         << ", balance: " << acc.get_balance()
-         << " ]" << endl;
+            << ", balance: " << acc.get_balance()
+            << " ]" << endl;
 }
 
 void
-print_account(const banking::account* acc) {
+print_account(const banking::account *acc) {
     cout << "account[ iban: " << acc->get_iban()
-         << ", balance: " << acc->get_balance()
-         << " ]" << endl;
+            << ", balance: " << acc->get_balance()
+            << " ]" << endl;
 }
 
 int main() {

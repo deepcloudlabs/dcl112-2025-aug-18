@@ -22,5 +22,3 @@ bool banking::Account::withdraw(const double amount) {
     balance -= amount;
     return true;
 }
-
-

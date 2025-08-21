@@ -4,15 +4,14 @@
 using namespace std;
 
 void
-print_account(const banking::account& acc) {
+print_account(const banking::account &acc) {
     cout << "account[ iban: " << acc.get_iban()
-         << ", balance: " << acc.get_balance()
-         << " ]" << endl;
+            << ", balance: " << acc.get_balance()
+            << " ]" << endl;
     // acc.withdraw(1'000); // error: cannot make a call to non-const methods!
 }
 
 int main() {
-
     // stack object
     banking::account acc1{"tr3"};
 

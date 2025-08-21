@@ -1,22 +1,25 @@
 #include "vehicle.h"
 
 namespace siemens {
-    double Vehicle::getLoad() const { // kg
+    double Vehicle::getLoad() const {
+        // kg
         return newsToKilo(load);
     }
 
-    double Vehicle::getMaxLoad() const { // kg
+    double Vehicle::getMaxLoad() const {
+        // kg
         return newsToKilo(maxLoad);
     }
 
-    bool Vehicle::addBox(const double weight) { // kg
+    bool Vehicle::addBox(const double weight) {
+        // kg
         auto weight_in_newton = kiloToNews(weight);
         // validation
         if (weight_in_newton <= 0) {
             return false;
         }
         // business rule
-        if ((load+weight_in_newton) > maxLoad) {
+        if ((load + weight_in_newton) > maxLoad) {
             return false;
         }
         load += weight_in_newton;
@@ -28,6 +31,6 @@ namespace siemens {
     }
 
     double Vehicle::kiloToNews(const double weight) {
-            return 9.8 * weight;
+        return 9.8 * weight;
     }
 } // siemens

@@ -24,7 +24,7 @@ namespace banking {
     }
 
     void Customer::addAccount(Account *acc) {
-        accounts.insert(accounts.end(),acc);
+        accounts.insert(accounts.end(), acc);
     }
 
     int Customer::getNumberOfAccounts() const {
@@ -32,7 +32,7 @@ namespace banking {
     }
 
     Customer::~Customer() {
-        for (const auto account : accounts) {
+        for (const auto account: accounts) {
             delete account;
         }
     }

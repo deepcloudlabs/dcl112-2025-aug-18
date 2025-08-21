@@ -7,7 +7,6 @@
 namespace zoo {
     void animal::walk() {
         std::cout << "Animal with "
-                  << this->legs << " legs is walking now..." << std::endl;
+                << this->legs << " legs is walking now..." << std::endl;
     }
-
 } // zoo

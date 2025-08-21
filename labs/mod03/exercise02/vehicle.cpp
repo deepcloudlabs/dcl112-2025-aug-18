@@ -15,7 +15,7 @@ namespace siemens {
             return false;
         }
         // business rule
-        if ((load+weight) > maxLoad) {
+        if ((load + weight) > maxLoad) {
             return false;
         }
         load += weight;

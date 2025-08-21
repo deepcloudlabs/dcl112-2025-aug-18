@@ -2,13 +2,13 @@
 using namespace std;
 
 int main() {
-    double a[5]{10,20,30,40,50} ;
-    double& first = a[0] ;
-    double& last = a[4] ;
+    double a[5]{10, 20, 30, 40, 50};
+    double &first = a[0];
+    double &last = a[4];
 
     cout << hex << a << endl; // 0x70731ff660
     cout << hex << &first << endl; // 0x70731ff660
-    cout << hex << a+4 << endl; // 0x70731ff680
+    cout << hex << a + 4 << endl; // 0x70731ff680
     cout << hex << &last << endl; // 0x70731ff680
     first++;
     a[0]++;

@@ -5,7 +5,6 @@ using namespace std;
 using namespace siemens;
 // 10:58
 int main() {
-
     // Create a vehicle that can handle 10,000 kilograms weight
     cout << endl << "Creating a vehicle with a 10,000kg maximum load.";
     Vehicle vehicle(10000.0);
@@ -19,6 +18,5 @@ int main() {
 
     // Print out the final vehicle load
     cout << endl << "Vehicle load is " << vehicle.getLoad() << " kg\n";
-    return 0;	
+    return 0;
 }
-

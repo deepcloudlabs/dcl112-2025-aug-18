@@ -7,15 +7,20 @@ using namespace std;
 // 4. destructor
 class A {
     int *data;
-    public:
-    A() { // default constructor
+
+public:
+    A() {
+        // default constructor
         cout << "A()" << endl;
         data = new int(1);
     }
-    explicit A(int data) { // default constructor
-        cout << "A("<< data << ")" << endl;
+
+    explicit A(int data) {
+        // default constructor
+        cout << "A(" << data << ")" << endl;
         this->data = new int(data);
     }
+
     /*
     A(const A&other) { // copy constructor
         cout << "A(const A&other)" << endl;
@@ -37,7 +42,7 @@ int main() {
     A a2{2};
     A a3 = a2;
     A a4;
-    A a5 ;
+    A a5;
     a4 = a3;
     a5 = a4;
     return 0;

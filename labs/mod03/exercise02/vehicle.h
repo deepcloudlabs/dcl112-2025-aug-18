@@ -6,13 +6,17 @@ namespace siemens {
     private:
         double load;
         double maxLoad;
+
     public:
         explicit Vehicle(double max_Load) {
             this->maxLoad = max_Load;
             this->load = 0;
         }
+
         [[nodiscard]] double getLoad() const;
+
         [[nodiscard]] double getMaxLoad() const;
+
         bool addBox(double weight);
     };
 } // siemens

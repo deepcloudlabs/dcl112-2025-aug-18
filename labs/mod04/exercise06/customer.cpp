@@ -17,11 +17,11 @@ namespace banking {
         return lastName;
     }
 
-    Account* Customer::getAccount() {
+    Account *Customer::getAccount() {
         return account;
     }
 
-    void Customer::setAccount(Account* account) {
+    void Customer::setAccount(Account *account) {
         this->account = account;
     }
 

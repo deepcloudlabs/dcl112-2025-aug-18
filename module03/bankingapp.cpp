@@ -11,11 +11,11 @@ int main() {
 
     acc1.deposit(-10'000);
     acc2.withdraw(10'000'000);
-     cout << "acc1[ iban: " << acc1.get_iban()
-          << ", balance: " << acc1.get_balance()
-          << " ]" << endl;
+    cout << "acc1[ iban: " << acc1.get_iban()
+            << ", balance: " << acc1.get_balance()
+            << " ]" << endl;
     cout << "acc2[ iban: " << acc2.get_iban()
-          << ", balance: " << acc2.get_balance()
-          << " ]" << endl;
+            << ", balance: " << acc2.get_balance()
+            << " ]" << endl;
     return 0;
 }

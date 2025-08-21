@@ -9,7 +9,7 @@ namespace zoo {
         std::cout << name << " is eating now..." << std::endl;
     }
 
-    std::string & cat::getName() {
+    std::string &cat::getName() {
         return name;
     }
 

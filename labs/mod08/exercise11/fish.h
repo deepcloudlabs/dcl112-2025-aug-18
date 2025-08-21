@@ -28,7 +28,7 @@ namespace zoo {
 
         void play() override;
 
-        ~fish()  {
+        ~fish() {
             std::cout << "fish::~fish()" << std::endl;
         }
     };

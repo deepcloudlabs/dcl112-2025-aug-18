@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-    int n=1 ; // 0x99dddffc5c
-    int nn = n ; // 0x99dddffc58
+    int n = 1; // 0x99dddffc5c
+    int nn = n; // 0x99dddffc58
     int nnn = n; // 0x99dddffc54
     cout << hex << &n << endl;
     cout << hex << &nn << endl;

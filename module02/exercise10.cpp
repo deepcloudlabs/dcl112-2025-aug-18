@@ -7,7 +7,7 @@ int main() {
     x++;
     cout << x << endl;
     cout << "Address of x: " << &x << endl;
-    int* p = nullptr;
+    int *p = nullptr;
     cout << "Address of p: " << hex << &p << endl;
     cout << "p holds the address: " << hex << p << endl;
     p = &x;

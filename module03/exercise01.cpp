@@ -4,10 +4,10 @@
 using namespace std;
 
 void
-print_account(const banking::account& acc) {
+print_account(const banking::account &acc) {
     cout << "account[ iban: " << acc.get_iban()
-         << ", balance: " << acc.get_balance()
-         << " ]" << endl;
+            << ", balance: " << acc.get_balance()
+            << " ]" << endl;
 }
 
 int main() {
@@ -18,7 +18,7 @@ int main() {
     // stack object
     banking::account acc1{"tr3"};
     // stack array
-    banking::account bank_accounts[] {
+    banking::account bank_accounts[]{
         {"tr10", 1'000'000},
         {"tr20", 2'000'000},
         {"tr30", 3'000'000}, // 3'100'000

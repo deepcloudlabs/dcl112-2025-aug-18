@@ -3,7 +3,8 @@
 #include <iostream>
 
 namespace zoo {
-    class animal { // abstract class -> cannot instantiate an object
+    class animal {
+        // abstract class -> cannot instantiate an object
     protected:
         int legs;
 

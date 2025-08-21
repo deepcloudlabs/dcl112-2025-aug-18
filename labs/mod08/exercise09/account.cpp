@@ -6,7 +6,7 @@ banking::Account::Account(double balance) {
     this->balance = balance;
 }
 
-banking::Account banking::Account::operator+(const Account& other) const {
+banking::Account banking::Account::operator+(const Account &other) const {
     return Account{this->balance + other.balance};
 }
 

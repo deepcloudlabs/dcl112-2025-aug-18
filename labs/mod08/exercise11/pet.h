@@ -7,9 +7,10 @@
 #include <string>
 
 namespace zoo {
-    class pet { // interface
+    class pet {
+        // interface
     public:
-        virtual ~pet() =default;
+        virtual ~pet() = default;
 
         virtual std::string &getName() = 0;
 

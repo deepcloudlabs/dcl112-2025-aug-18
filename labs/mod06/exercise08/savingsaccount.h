@@ -3,9 +3,10 @@
 #include "account.h"
 
 namespace banking {
-    class SavingsAccount : public Account{
+    class SavingsAccount : public Account {
     private:
         double interest_rate;
+
     public:
         explicit SavingsAccount(double balance, double interest_rate);
     };

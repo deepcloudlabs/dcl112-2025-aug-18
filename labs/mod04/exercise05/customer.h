@@ -9,11 +9,16 @@ namespace banking {
         string firstName;
         string lastName;
         Account account;
-        public:
+
+    public:
         Customer(string firstName, string lastName);
+
         [[nodiscard]] string getFirstName() const;
-        [[nodiscard]] string  getLastName() const;
-        Account& getAccount();
+
+        [[nodiscard]] string getLastName() const;
+
+        Account &getAccount();
+
         void setAccount(Account account);
     };
 } // banking

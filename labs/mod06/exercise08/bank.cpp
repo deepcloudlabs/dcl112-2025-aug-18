@@ -3,9 +3,9 @@
 #include <utility>
 
 namespace banking {
-    Bank::~Bank () {
+    Bank::~Bank() {
         if (numberOfCustomers > 0 && customers != nullptr) {
-            for (auto i=0; i < numberOfCustomers; i++) {
+            for (auto i = 0; i < numberOfCustomers; i++) {
                 auto customer = customers[i];
                 delete customer;
             }
@@ -13,10 +13,10 @@ namespace banking {
         }
     }
 
-    Customer* Bank::addCustomer(string firstName,string lastName) {
+    Customer *Bank::addCustomer(string firstName, string lastName) {
         const auto customer = new Customer(std::move(firstName), std::move(lastName));
-        const auto newCustomers = new Customer*[numberOfCustomers+1];
-        for (auto i=0; i < numberOfCustomers; i++) {
+        const auto newCustomers = new Customer *[numberOfCustomers + 1];
+        for (auto i = 0; i < numberOfCustomers; i++) {
             newCustomers[i] = customers[i];
         }
         newCustomers[numberOfCustomers] = customer;
@@ -26,8 +26,8 @@ namespace banking {
         return customer;
     }
 
-    Customer* Bank::getCustomer(int index) const {
-        if (index <0 || index >= numberOfCustomers) {
+    Customer *Bank::getCustomer(int index) const {
+        if (index < 0 || index >= numberOfCustomers) {
             return nullptr;
         }
         return customers[index];

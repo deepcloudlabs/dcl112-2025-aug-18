@@ -13,16 +13,15 @@ int main() {
     bank->addCustomer("Tim", "Soley");
     bank->addCustomer("Maria", "Soley");
 
-    for ( int i = 0; i < bank->getNumberOfCustomers(); i++ ) {
-      Customer *customer = bank->getCustomer(i);
+    for (int i = 0; i < bank->getNumberOfCustomers(); i++) {
+        Customer *customer = bank->getCustomer(i);
 
-      cout << "Customer [" 
-           << (i+1) << "] is "
-	   << customer->getLastName()
-	   << ", " 
-           << customer->getFirstName() 
-           << endl  ;     
+        cout << "Customer ["
+                << (i + 1) << "] is "
+                << customer->getLastName()
+                << ", "
+                << customer->getFirstName()
+                << endl;
     }
     return 0;
 }
-

@@ -10,7 +10,8 @@ namespace banking {
         // domain class
         string firstName;
         string lastName;
-        vector<Account*> accounts;
+        vector<Account *> accounts;
+
     public:
         Customer(string firstName, string lastName);
 

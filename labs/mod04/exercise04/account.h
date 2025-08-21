@@ -7,10 +7,11 @@ using namespace std;
 namespace banking {
     class Account {
         double balance;
+
     public:
         // methods
-        explicit Account(double balance=0.0); // declaration
-        [[nodiscard]] double getBalance() const {return balance;} // declaration + definition
+        explicit Account(double balance = 0.0); // declaration
+        [[nodiscard]] double getBalance() const { return balance; } // declaration + definition
         // business methods
         double withdraw(double amount); // declaration
         double deposit(double amount); // declaration
